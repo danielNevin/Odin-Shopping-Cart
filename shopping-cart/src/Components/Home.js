@@ -1,29 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home(props) {
+
   return(
-    <div className="flex flex-col w-full h-screen shadow-xl-inset items-center bg-hero-image">
-      <div className="flex h-full flex-col items-center w-1/2 gap-32 px-16 py-32">
-        <div className="flex flex-col gap-32">
-          <div className="flex shadow-2xl">
-            <div className="flex flex-col w-1/2 h-full bg-slate-200 border-r-4 border-black py-16 px-8 font-bold text-xl text-center justify-between">
-              <p>Are you interested in buying expensive goods that you really do not need?</p>
-              <p>Do you take pleasure from the act of keying your card details into a payment page?</p>
-            </div>
+    <div className="flex flex-col items-center justify-center h-screen w-full bg-slate-100">
+      <p className="w-3/4 py-8 font-bold text-4xl tracking-wide">
+        The GeForce RTX 4090
+      </p>
+      <div className="flex flex-row items-center justify-center w-3/4 h-1/2 gap-8">
+        <div className="h-full w-2/3 bg-hero-image bg-cover bg-center rounded-2xl shadow-2xl hover:scale-105 hover:brightness-125 transition-all">
+        </div>
+        <div className="flex flex-col justify-between h-full p-10 w-1/3 bg-white rounded-2xl shadow-2xl hover:scale-105 transition-all ">
+          <div className="flex flex-col h-2/3 justify-between items">
+            <p className="font-semibold text-lg">The NVIDIA® GeForce RTX™ 4090 is the ultimate GeForce GPU. It brings an enormous leap in performance, efficiency, and AI-powered graphics. Experience ultra-high performance gaming, incredibly detailed virtual worlds, unprecedented productivity, and new ways to create. It’s powered by the NVIDIA Ada Lovelace architecture and comes with 24 GB of G6X memory to deliver the ultimate experience for gamers and creators.</p>
           </div>
-          <div className="flex shadow-2xl p-8  bg-slate-200 font-bold text-xl border-r-4 border-black justify-center">
-            If the answer to either of these questions is YES! press the button below
+          <div className="flex h-full items-center justify-center">
+            <Link to={'/shop'}>
+              <button className="p-4 bg-lime-500 text-lg font-semibold text-white rounded-xl hover:bg-lime-600">See All Buying Options</button>
+            </Link>
           </div>
         </div>
-        <Link to={'/shop'}>
-          <button className="flex shadow-2xl border-l-4 border-r-4 bg-slate-200  border-black py-8 px-16 font-bold text-xl hover:animate-shop-pulse bg-white items-center rounded-2xl" >
-            SHOP NOW
-          </button>
-        </Link>
       </div>
+      
     </div>
-    
   )
 }
 

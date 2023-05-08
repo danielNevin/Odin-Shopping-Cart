@@ -1,9 +1,10 @@
 import React from "react";
-import CartCard from "./CartCard";
+import ShopCartCard from "./ShopCartCard";
+import { Link } from "react-router-dom";
 
-function Cart(props) {
+function ShopCart(props) {
   const cartCards = props.cart.map((product, index) => {
-    return <CartCard quantity={product.quantity} item={product.item}/>
+    return <ShopCartCard quantity={product.quantity} item={product.item}/>
   })
 
   const isCartEmpty = (data) => {
@@ -19,12 +20,17 @@ function Cart(props) {
       <div className="flex flex-col w-full h-full gap-8">
         {isCartEmpty(props.cart.length) ? (
           <p className="flex flex-row text-m w-36 justify-center items-center font-bold">Your Cart is Empty</p>
-        ) : (
-          cartCards
+        ) : (     
+          <div className="flex  flex-col items-center justify-center gap-4">
+            {cartCards}
+            <Link to={'/checkout'}>
+              <button className="bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded-2xl h-12">PROCEED TO CHECKOUT</button>
+            </Link>
+          </div>
         )}
       </div>
     </div>
   )
 }
 
-export default Cart;
+export default ShopCart;

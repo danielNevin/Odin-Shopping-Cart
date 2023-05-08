@@ -1,6 +1,6 @@
 import React from "react";
 
-function CartCard(props) {
+function ShopCartCard(props) {
 
   return (
     <div className="grid grid-cols-5 w-96 gap-2 p-4 overflow-clip justify-center h-24 border-b-4 rounded-xl bg-white items-center">
@@ -12,4 +12,4 @@ function CartCard(props) {
   )
 }
 
-export default CartCard;
+export default ShopCartCard;

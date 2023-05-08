@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image': "url('https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX-4090-SUPRIM/RTX-4090-SUPRIM-24G/images2/design_2_n.png')",
+        'hero-image': "url('https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-ada-4090-web-og-1200x630.jpg')",
       },
       boxShadow: {
         'xl-inset': 'inset 0px 4px 8px 0 rgb(0 0 0 / 0.05)',

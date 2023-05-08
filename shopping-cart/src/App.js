@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from 'react-router-dom';
 import Home from "./Components/Home";
 import Shop from "./Components/Shop";
+import Checkout from "./Components/Checkout";
 
 function App() {
   useEffect(() => {
@@ -81,9 +82,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/shop' element={<Shop products={products} cart={cart} addToCart={addToCart} cartTotal={cartTotal} cartQuantity={cartQuantity} incrementItemQuantity={incrementItemQuantity} deincrementItemQuantity={deincrementItemQuantity} retrieveItemQuantity={retrieveItemQuantity}/>} />
-        <Route path='*' element={<div>Not found</div>} />
+        <Route exact path='/' element={ <Home products={products} cart={cart} addToCart={addToCart} cartTotal={cartTotal} cartQuantity={cartQuantity} incrementItemQuantity={incrementItemQuantity} deincrementItemQuantity={deincrementItemQuantity} retrieveItemQuantity={retrieveItemQuantity} /> } />
+        <Route path='/shop' element={ <Shop products={products} cart={cart} addToCart={addToCart} cartTotal={cartTotal} cartQuantity={cartQuantity} incrementItemQuantity={incrementItemQuantity} deincrementItemQuantity={deincrementItemQuantity} retrieveItemQuantity={retrieveItemQuantity} /> } />
+        <Route path="/checkout" element={ <Checkout /> } />
       </Routes>
     </div>
   );
